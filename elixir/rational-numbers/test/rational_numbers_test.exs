@@ -179,7 +179,7 @@ defmodule RationalNumbersTest do
   end
 
   describe "Exponentiation of a real number to a rational number" do
-    @tag :pending
+    # @tag :pending
     test "Raise a real number to a positive rational number" do
       x = 8
       r = {4, 3}
@@ -187,7 +187,7 @@ defmodule RationalNumbersTest do
       assert_in_delta RationalNumbers.pow_real(x, r), result, 1.0e-10
     end
 
-    @tag :pending
+    # @tag :pending
     test "Raise a real number to a negative rational number" do
       x = 9
       r = {-1, 2}
@@ -195,7 +195,7 @@ defmodule RationalNumbersTest do
       assert_in_delta RationalNumbers.pow_real(x, r), result, 1.0e-10
     end
 
-    @tag :pending
+    # @tag :pending
     test "Raise a real number to a zero rational number" do
       x = 2
       r = {0, 1}
@@ -205,37 +205,37 @@ defmodule RationalNumbersTest do
   end
 
   describe "Reduction to lowest terms" do
-    @tag :pending
+    # @tag :pending
     test "Reduce a positive rational number to lowest terms" do
       assert RationalNumbers.reduce({2, 4}) == {1, 2}
     end
 
-    @tag :pending
+    # @tag :pending
     test "Reduce places the minus sign on the numerator" do
       assert RationalNumbers.reduce({3, -4}) == {-3, 4}
     end
 
-    @tag :pending
+    # @tag :pending
     test "Reduce a negative rational number to lowest terms" do
       assert RationalNumbers.reduce({-4, 6}) == {-2, 3}
     end
 
-    @tag :pending
+    # @tag :pending
     test "Reduce a rational number with a negative denominator to lowest terms" do
       assert RationalNumbers.reduce({3, -9}) == {-1, 3}
     end
 
-    @tag :pending
+    # @tag :pending
     test "Reduce zero to lowest terms" do
       assert RationalNumbers.reduce({0, 6}) == {0, 1}
     end
 
-    @tag :pending
+    # @tag :pending
     test "Reduce an integer to lowest terms" do
       assert RationalNumbers.reduce({-14, 7}) == {-2, 1}
     end
 
-    @tag :pending
+    # @tag :pending
     test "Reduce one to lowest terms" do
       assert RationalNumbers.reduce({13, 13}) == {1, 1}
     end

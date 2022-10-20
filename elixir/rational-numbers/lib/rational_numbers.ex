@@ -90,6 +90,9 @@ defmodule RationalNumbers do
   """
   @spec pow_real(x :: integer, n :: rational) :: float
   def pow_real(x, n) do
+    {num, den} = n
+
+    x ** (num / den)
   end
 
   @doc """
@@ -104,7 +107,7 @@ defmodule RationalNumbers do
     reduced_num = (num / gcd) |> trunc()
     reduced_den = (den / gcd) |> trunc()
 
-    {reduced_num, reduced_den}
+    {reduced_num, reduced_den} |> turn_valid()
   end
 
   @spec turn_valid(rational :: rational()) :: rational()
